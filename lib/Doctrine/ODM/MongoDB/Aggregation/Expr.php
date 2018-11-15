@@ -200,6 +200,16 @@ class Expr
         return $this->operator('$avg', $expression);
     }
 
+    public function bitsAllSet($expression, $value)
+    {
+        return $this->operator('$bitsAllSet', [$expression, $value]);
+    }
+
+    public function bitsAllClear($expression, $value)
+    {
+        return $this->operator('$bitsAllClear', [$expression, $value]);
+    }
+    
     /**
      * Adds a case statement for a branch of the $switch operator.
      *
