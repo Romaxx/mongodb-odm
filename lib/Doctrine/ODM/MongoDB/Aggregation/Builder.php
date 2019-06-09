@@ -193,10 +193,10 @@ class Builder extends BaseBuilder
     /**
      * {@inheritdoc}
      */
-    public function unwind($fieldName)
+    public function unwind($fieldName,$preserveNullAndEmptyArrays)
     {
         $fieldName = $this->getDocumentPersister()->prepareFieldName($fieldName);
-        return parent::unwind($fieldName);
+        return parent::unwind($fieldName,$preserveNullAndEmptyArrays);
     }
 
     /**
